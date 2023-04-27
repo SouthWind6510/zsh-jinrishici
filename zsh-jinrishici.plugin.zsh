@@ -8,4 +8,4 @@ if ! (( $+commands[jq] )); then
     return
 fi
 
-curl --connect-timeout 0.2 -sL 'https://v2.jinrishici.com/sentence' -H 'X-User-Token: {TOKEN} | jq '.data.content, .data.origin.title, .data.origin.dynasty, .data.origin.author'
+curl --connect-timeout 0.2 -sL 'https://v2.jinrishici.com/sentence' -H 'X-User-Token: {TOKEN}' | jq '.data.content, .data.origin.title, .data.origin.dynasty, .data.origin.author'
